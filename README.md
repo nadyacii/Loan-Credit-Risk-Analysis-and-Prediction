@@ -2,22 +2,26 @@
 This project, Loan Credit Risk Prediction, was created as part of the final project for the Project-Based Internship at Rakamin Academy x ID/X Partners.
 
 ## Problem Statement
-Lending companies (multifinance) face significant challenges in accurately assessing the credit risk of each loan applicant. Inaccurate decisions in approving or rejecting loan applications can lead to an increase in bad debt and financial losses. Therefore, a reliable credit risk prediction system is crucial to optimize the business decision-making process.
+Lending companies (multifinance) face significant challenges in accurately assessing the credit risk of each loan applicant. Two critical decisions often involve different risks:
 
-As a Data Scientist at ID/X Partners, I am involved in a strategic project to help a multifinance client improve the accuracy of credit risk assessment and management. This project aims to develop a machine learning model based on historical datasets that include both approved and rejected loan applications, in order to predict the risk level of each applicant more effectively. With this data-driven approach, the company is expected to minimize default risk, strengthen its loan portfolio, and improve long-term profitability.
+- Approving loans for applicants who are unlikely to repay, which can result in increased bad debt and substantial financial losses.
+
+- Rejecting loans for applicants who are actually creditworthy, leading to missed business opportunities and reduced profitability.
+
+These challenges highlight the urgent need for a reliable and data-driven credit risk prediction system to support better decision-making and minimize both types of risk.
+
+## Company Goals
+1. Approve loans for applicants who are likely to repay on time.
+
+2. Decline loans for applicants who have a high risk of not paying back.
 
 ## Objectives
- 1. Build a machine learning model to predict 
- credit risk based on historical data from loan
+1. Build a machine learning model to predict credit risk based on historical data from loan
  applicants.
-  
- 2. Enhance the accuracy of credit risk evaluations, 
- al lowing the company to make more precise
- decisions in approving or rejecting loan
- applications.
-  
- 3. Reduce potential financial losses by optimizing 
- loan approval strategies.
+
+2. Predict whether an applicant is a good or bad borrower.
+
+3. Identify the factors that indicate a borrower is high risk.
 
 ## Dataset
 This dataset contains credit loan information from a lending company from 2007 to 2014.
