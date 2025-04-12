@@ -32,19 +32,20 @@ This dataset contains credit loan information from a lending company from 2007 t
 3. A descriptive statistical analysis was performed on all numerical features to understand the data distribution, minimum and maximum values, mean, and standard deviation spread.
 4. I grouped **loan_status** column into two main labels: "good loaner" for borrowers with a good repayment history, and "bad loaner" for those who are at high risk of default. This step is essential to convert the target variable into a binary format suitable for a machine learning classification model.
 
-5. ![Donnut Chart Loan Status](images/loan status donut chart.png)
+![Donnut Chart Loan Status](image/loan_status_donut_chart.png)
 
-After grouping loan statuses into good loaner and bad loaner, the chart shows that the majority of borrowers (around 88.4%) fall into the good loaner category, while only 11.6% are classified as bad loaner. This indicates that the dataset is imbalanced, which may affect the performance of classification models and should be addressed during modeling—possibly through techniques like oversampling or undersampling.
-5. To gain a deeper understanding of the loan applicants, I created visualizations that answer three key questions: 
+5. After grouping loan statuses into good loaner and bad loaner, the chart shows that the majority of borrowers (around 88.4%) fall into the good loaner category, while only 11.6% are classified as bad loaner. This indicates that the dataset is imbalanced, which may affect the performance of classification models and should be addressed during modeling—possibly through techniques like oversampling or undersampling.
 
-a. Who applies for credit?
-image
+6. To gain a deeper understanding of the loan applicants, I created visualizations that answer three key questions: 
 
-b. Where the borrowers are domiciled?
-image
-
-c. Why they apply for loans?
-image
+    a. Who applies for credit?
+    ![Who applies for credit?](image/who_applies_credit.png)
+    
+    b. Where the borrowers are domiciled?
+    ![Where the borrowers are domiciled?](image/domiciled_borrowers.png)
+    
+    c. Why they apply for loans?
+    ![Why they apply for loans?](image/why_borrowers_apply.png)
 
 These insights are crucial in identifying patterns and trends among borrowers, which can help improve the accuracy of credit risk predictions by revealing demographic and behavioral factors associated with loan applications.
 
@@ -87,18 +88,21 @@ total_pymnt_inv were removed because they do not provide meaningful contribution
 
 ### 5. Heatmap
 
-image
+![Correlation Matrix?](image/heatmap_loan_credit.png)
+
 
 The correlation matrix reveals several key relationships between features. The loan amount and funded amount have a perfect correlation (1.00), indicating they are nearly identical. Similarly, installment and loan amount show a strong correlation (0.95), suggesting that higher loans result in higher monthly payments. Additionally, out_prncp and out_prncp_inv also have a perfect correlation (1.00), as both represent the outstanding principal. Meanwhile, the good/bad loaner label shows weak correlations with other features, indicating that loan default risk is influenced by multiple factors beyond those captured in this dataset. These insights are crucial for refining feature selection in predictive modeling.
 
 ### 6. Data Distribution
 
-image
+![Data Distribution](image/data_distribution_loan_credit.png)
+
 Based on the histogram, the columns int_rate and dti exhibit a distribution that is close to normal. This suggests that these features may follow a typical bell-shaped curve, which could be useful for statistical analysis and modeling.
 
 ### 7. Univariate Analysis
 
-image
+![Univariate Analysis](image/univariate_analysis_loan_credit.png)
+
 Based on the analysis, we can see the following:
 
 - The graph indicates a highly left skewed distribution, with a significantly tall peak at the "good" value. This suggests that the majority of loans in the dataset are categorized as good loans.
@@ -107,7 +111,8 @@ Based on the analysis, we can see the following:
 
 ### 8. Bivariate Analysis
 
-image
+![Bivariate Analysis](image/bivariate_analysis_loan_credit.png)
+
 From the bivariate analysis, we can see the following: 
 - The graph clearly shows that loans categorized as "bad" have a higher average interest rate (15.90%) compared to "good" loans which have an average interest rate of 13.74%.
 
@@ -115,12 +120,14 @@ From the bivariate analysis, we can see the following:
 
 ### 1. Handling Outliers
 
-image
+![Handling Outliers](image/outliers_loan_credit.png)
+
 Based on the boxplot above, several columns contain extreme outliers. To reduce these outliers, a transformation will be applied to minimize their impact.
 
 ### 2. Log Transformation
 
-image
+![Log Transformation](image/log_transformation.png)
+
 With the application of Log Transformation, the distribution of the annual_inc column appears more normal, making it ready to be used as a feature in the model. However, some columns, such as total_rec_late_fee, collections_12_mths_ex_med, delinq_2yrs, and inq_last_6mths, still have high peaks, likely due to many borrowers having no late payments or outstanding collections.
 
 ### 3. Scaling Data
@@ -132,7 +139,7 @@ I selected a subset of features that are most relevant for analyzing and modelin
 
 ### 5. SMOTE
 
-image
+![SMOTE](image/smote_loan_credit.png)
 - Before SMOTE:
 a. The "Good Loaner" class is highly dominant (95.4%).
 b. The "Bad Loaner" class is very small (4.6%).
@@ -158,12 +165,14 @@ This variety of models helps ensure a comprehensive understanding of which algor
 
 ## Evaluation
 
-image
+![Model Evaluation](image/evaluation_model.png)
+
 The K-Nearest Neighbors (KNN) model performs the best compared to other models. It has the highest Score (88.78), ROC-AUC (96.18), and Cross-Validation Score (78.14). This means KNN is very good at making predictions and distinguishing between classes.
 
 ## Confusion Matrix
 
-image
+![Confusion Matrix](image/confusion_matrix_loan_credit.png)
+
 Based on the confusion matrix, K-Nearest Neighbors (KNN) outperforms other models with the highest accuracy in predicting both positive and negative classes. It records the highest True Positives (41,960) and high True Negatives (32,674), with only 72 False Negatives, which means it almost perfectly identifies high-risk (Bad) loans. 
 
 ## Conclusion
