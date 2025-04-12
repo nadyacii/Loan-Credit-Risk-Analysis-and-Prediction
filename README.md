@@ -138,7 +138,7 @@ b. The "Bad Loaner" class is very small (4.6%).
  b. SMOTE successfully created new "Bad Loaner" data.
 
 ### 6. Spliting Data
-I split the dataset into training and testing sets using an 80:20 ratio to ensure the model is trained on a majority of the data while retaining a portion for evaluation. After applying resampling, the training set consists of 336,254 samples.
+I split the dataset into training and testing sets using an 80:20 ratio to ensure the model is trained on a majority of the data while retaining a portion for evaluation. After applying resampling, the training set consists of 336,254 samples, and the testing set contains 84,064 samples.
 
 ## Data Modeling
 I used six different machine learning models to evaluate and compare their performance in classifying loan risk. These models include:
