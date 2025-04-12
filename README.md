@@ -32,7 +32,7 @@ This dataset contains credit loan information from a lending company from 2007 t
 3. A descriptive statistical analysis was performed on all numerical features to understand the data distribution, minimum and maximum values, mean, and standard deviation spread.
 4. I grouped **loan_status** column into two main labels: "good loaner" for borrowers with a good repayment history, and "bad loaner" for those who are at high risk of default. This step is essential to convert the target variable into a binary format suitable for a machine learning classification model.
 
-5. gambar chart loan status
+5. ![Donnut Chart Loan Status](images/loan status donut chart.png)
 
 After grouping loan statuses into good loaner and bad loaner, the chart shows that the majority of borrowers (around 88.4%) fall into the good loaner category, while only 11.6% are classified as bad loaner. This indicates that the dataset is imbalanced, which may affect the performance of classification models and should be addressed during modeling—possibly through techniques like oversampling or undersampling.
 5. To gain a deeper understanding of the loan applicants, I created visualizations that answer three key questions: 
